@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+<menu id="root-menu" label="MENU">
+<item label="Video Duplicate Finder"><action name="Execute"><command>/usr/local/bin/vdf</command></action></item>
+<item label="Reload OB"><action name="Reconfigure"/></item>
+</menu>
+</openbox_menu>

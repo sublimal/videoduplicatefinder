@@ -1,0 +1,9 @@
+{
+  "Includes":["/data"],
+  "IncludeImages":false,
+  "PercentDurationDifference":15,
+  "Thumbnails":5,
+  "HardwareAccelerationMode": 0,
+  "UseNativeFfmpegBinding": true,
+  "CustomDatabaseFolder": "/config/.local/share/vdf/"
+}

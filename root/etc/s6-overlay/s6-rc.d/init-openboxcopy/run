@@ -1,0 +1,19 @@
+#!/usr/bin/with-contenv bash
+
+# default file copies first run
+if [[ ! -f /config/.config/openbox/menu.xml ]]; then
+    mkdir -p /config/.config/openbox && \
+    cp /defaults/menu.xml /config/.config/openbox/menu.xml && \
+    chown -R abc:abc /config/.config
+fi
+
+if [[ ! -f /config/.config/vdf.json ]]; then
+    mkdir -p /config/.config && \
+    cp /defaults/vdf.json /config/.config/vdf.json && \
+    chown -R abc:abc /config/.config
+fi
+
+if [[ ! -d /config/.local/share/vdf ]]; then
+  mkdir -p /config/.local/share/vdf && \
+  chown -R abc:abc /config/.local/share/vdf
+fi

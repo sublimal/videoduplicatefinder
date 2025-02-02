@@ -1,0 +1,21 @@
+name: vdf
+services:
+  videoduplicatefinder:
+    container_name: videoduplicatefinder
+    restart: unless-stopped
+    volumes:
+    - config:/config
+    - /mnt/pool/data:/data
+    ports:
+    - 3000:3000
+
+    # https://github.com/linuxserver/docker-baseimage-kasmvnc#options
+    environment:
+    - PUID=1000
+    - PGID=50
+    - UMASK=002
+    - KEYBOARD=en-us-qwerty
+    - TZ=Australia/Melbourne
+    build:
+      context: https://github.com/sublimal/videoduplicatefinder
+      dockerfile: Dockerfile
