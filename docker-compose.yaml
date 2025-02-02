@@ -8,9 +8,12 @@ services:
     - /mnt/pool/data:/data
     ports:
     - 3000:3000
+    #- 3001:3001
 
     # https://github.com/linuxserver/docker-baseimage-kasmvnc#options
     environment:
+    - CUSTOM_PORT=3000
+    - CUSTOM_HTTPS_PORT=3001
     - PUID=1000
     - PGID=50
     - UMASK=002
