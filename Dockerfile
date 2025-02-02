@@ -3,7 +3,7 @@ FROM ghcr.io/linuxserver/baseimage-kasmvnc:ubuntujammy
 ARG VERSION=3.0.x
 
 # title
-ENV TITLE=Video Duplicate Finder
+ENV TITLE="Video Duplicate Finder"
 
 RUN curl -L https://github.com/0x90d/videoduplicatefinder/releases/download/$VERSION/App-linux-x64.tar.gz | \
   tar -C/opt --transform='s,outputFolder,vdf,' -zxvf -

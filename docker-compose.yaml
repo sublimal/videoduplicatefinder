@@ -17,5 +17,5 @@ services:
     - KEYBOARD=en-us-qwerty
     - TZ=Australia/Melbourne
     build:
-      context: https://github.com/sublimal/videoduplicatefinder
+      context: https://github.com/sublimal/videoduplicatefinder.git
       dockerfile: Dockerfile
