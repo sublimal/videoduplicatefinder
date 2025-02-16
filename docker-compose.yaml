@@ -22,3 +22,10 @@ services:
     build:
       context: https://github.com/sublimal/videoduplicatefinder.git
       dockerfile: Dockerfile
+
+x-portals:
+  - host: 0.0.0.0
+    name: Web UI
+    path: /
+    port: 3000
+    scheme: http
