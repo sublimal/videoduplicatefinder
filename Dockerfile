@@ -1,6 +1,7 @@
 FROM ghcr.io/linuxserver/baseimage-kasmvnc:ubuntujammy
 
 ARG VERSION=3.0.x
+ARG EXTRA_PACKAGES="pcmanfm"
 
 # title
 ENV TITLE="Video Duplicate Finder"
@@ -10,7 +11,7 @@ RUN curl -L https://github.com/0x90d/videoduplicatefinder/releases/download/$VER
 
 # Needs to be 7.x for vdf 3.0.x
 RUN add-apt-repository ppa:ubuntuhandbook1/ffmpeg7 && \
-  apt-get install -y ffmpeg && \
+  apt-get install -y ffmpeg $EXTRA_PACKAGES && \
   apt-get autoclean && \
   rm -rf \
     /var/lib/apt/lists/* \
