@@ -13,6 +13,18 @@ if [[ ! -f /config/.config/vdf.json ]]; then
     chown -R abc:abc /config/.config
 fi
 
+if [[ ! -f /config/.config/openbox/menu.xml ]]; then
+    mkdir -p /config/.config/openbox && \
+    cp /defaults/menu.xml /config/.config/openbox/menu.xml && \
+    chown -R abc:abc /config/.config
+fi
+
+if [[ ! -f /config/.config/gtk-3.0/settings.ini ]]; then
+    mkdir -p /config/.config/gtk-3.0 && \
+    cp /defaults/settings.ini /config/.config/gtk-3.0/settings.ini && \
+    chown -R abc:abc /config/.config
+fi
+
 if [[ ! -d /config/.local/share/vdf ]]; then
   mkdir -p /config/.local/share/vdf && \
   chown -R abc:abc /config/.local/share/vdf

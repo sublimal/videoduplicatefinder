@@ -1,7 +1,7 @@
 FROM ghcr.io/linuxserver/baseimage-kasmvnc:ubuntujammy
 
 ARG VERSION=3.0.x
-ARG EXTRA_PACKAGES="pcmanfm"
+ARG EXTRA_PACKAGES="pcmanfm gnome-themes-standard"
 
 # title
 ENV TITLE="Video Duplicate Finder"
